@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --very-light-gray: hsl(0, 0%, 95%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  outline: 0;
+}
+
+html, body {
+  height: 100vh;
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-size: 15px;
+}
+
+body {
+  background: var(--very-light-gray);
+}
+
+.orange {
+  color: var(--bright-orange);
+}
+
+.cyan {
+  color: var(--dark-cyan);
+}
+
+.dark-cyan {
+  color: var(--very-dark-cyan);
+}
+
+main {
+  margin: 0 auto;
+  height: 100%;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container {
+  width: 960px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.card {
+  background: var(--dark-cyan);
+  padding: 3.6rem;
+  color: var(--transparent-white);
+}
+
+.card:first-child {
+  background: var(--bright-orange);
+  border-radius: 10px 0 0 10px;
+}
+
+.card:last-child {
+  background: var(--very-dark-cyan);
+  border-radius: 0 10px 10px 0;
+}
+
+.card img {
+  margin-bottom: 2rem;
+}
+
+.card-title {
+  text-transform: uppercase;
+  color: var(--very-light-gray);
+
+  font-size: 2.6rem;
+  margin-bottom: 2rem;
+}
+
+.card p {
+  font-family: 'Lexend Deca', sans-serif;
+  line-height: 1.6rem;
+  font-size: 1rem;
+}
+
+.bnt-learn {
+  padding: 1rem 2rem;
+  margin-top: 6.6rem;
+  border: none;
+  border-radius: 100px;
+  font-family: 'Lexend Deca', sans-serif;
+  background: var(--very-light-gray);
+  font-size: 1rem;
+}
+
+
+@media screen and (max-width: 720px) {
+
+  html, body {
+    font-size: 16px;
+  }
+
+  main {
+    width: 100vw;
+    margin: 50px 0;
+    justify-content: initial;
+  }
+  .container {
+    width: 90%;
+    grid-template-columns: 1fr;
+  }
+
+  .card:first-child {
+    background: var(--bright-orange);
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .card:last-child {
+    background: var(--very-dark-cyan);
+    border-radius: 0 0 10px 10px;
+  }
+
+  .attribution {
+    padding: 50px 0;
+  }
+
+}
